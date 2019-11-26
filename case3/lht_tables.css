@@ -17,7 +17,43 @@
    Mobile Styles: 0px to 640px 
    ===============================
 */
+@media only screen and (max-width: 640px){
+   table, tbody, tr, td, th, caption{
+      display: block;
 
+   }
+   
+   thead, h1{
+      display: none;
+   }
+   table caption{
+      color: white;
+      background-color: lightgray;
+      font-size: 1.5em;
+      line-height: 2em;
+   }
+   td{
+      border: 1px dotted grey ;
+      color: rgb(11, 12, 145);
+      position: relative;
+      padding-left: 40%;
+      min-height: 40px;
+     
+   }
+   tr:nth-of-type(odd){
+      background-color: rgb(255, 235, 178);
+      border: 2px solid grey;
+   }
+   td::before{
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: attr(data-date);
+      padding-left: 5px;
+      width: 40%;
+      
+  }
+}
 
 
 
@@ -25,3 +61,42 @@
    Tablet and Desktop Styles: greater than 640px
    =============================================
 */
+@media only screen and (min-width: 641px){
+   table{
+      background-image: url(lht_photo1.png);
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      border: 6px double rgb(154, 64, 3);
+      border-collapse: collapse;
+      margin: 20px auto 20px auto;
+      table-layout: fixed;
+      width: 85%;
+   }
+   td, th{
+      border: 1px solid grey;
+      font-size: .85em;
+      font-weight: normal;
+      padding: 5px;
+      vertical-align: top;
+      width: 14.28%;
+      word-wrap: break-word;
+   }
+   td{
+      background-color: rgba(171, 171, 171, 0.6);
+      color: rgb(11, 12, 145);
+   }
+   td[data-date~="Feb"]{
+      background-color: rgba(232, 214, 148, 0.6);
+      box-shadow: grey inset 0px 0px 20px;
+   }
+   table caption{
+      align-content: center;
+      padding-bottom: 10px;
+      font-size: 1.2em;
+      letter-spacing: 3px;
+   }
+   thead th{
+      background-color: rgb(154, 64, 3);
+      color: white;
+   }
+}
